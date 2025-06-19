@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "hw10"
+version = "0.1.0"
+description = ""
+authors = ["Oleksandr Knyaz <lichknyaz@gmail.com>"]
+readme = "README.md"
+packages = [
+    {include = "."},
+    {include = "data_base"}
+]
+
+[tool.poetry.dependencies]
+python = ">=3.12,<4.0"
+fastapi = {extras = ["standard"], version = ">=0.115.12,<0.116.0"}
+sqlalchemy = ">=2.0.41,<3.0.0"
+alembic = ">=1.16.1,<2.0.0"
+faker = ">=37.3.0,<38.0.0"
+python-jose = {extras = ["cryptography"], version = ">=3.5.0,<4.0.0"}
+passlib = {extras = ["bcrypt"], version = ">=1.7.4,<2.0.0"}
+uvicorn = {extras = ["standard"], version = ">=0.27.0,<0.28.0"}
+slowapi = "^0.1.9"
+fastapi-mail = "^1.5.0"
+cloudinary = "^1.44.0"
+python-dotenv = "^1.1.0"
+pytest = "^8.4.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0"]
+build-backend = "poetry.core.masonry.api"
